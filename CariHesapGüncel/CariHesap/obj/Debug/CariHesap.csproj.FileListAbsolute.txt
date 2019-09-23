@@ -1,0 +1,26 @@
+C:\Users\gokce\source\repos\CariHesap\CariHesap\bin\Debug\CariHesap.exe.config
+C:\Users\gokce\source\repos\CariHesap\CariHesap\bin\Debug\CariHesap.exe
+C:\Users\gokce\source\repos\CariHesap\CariHesap\bin\Debug\CariHesap.pdb
+C:\Users\gokce\source\repos\CariHesap\CariHesap\obj\Debug\CariHesap.csprojAssemblyReference.cache
+C:\Users\gokce\source\repos\CariHesap\CariHesap\obj\Debug\CariHesap.Form1.resources
+C:\Users\gokce\source\repos\CariHesap\CariHesap\obj\Debug\CariHesap.Properties.Resources.resources
+C:\Users\gokce\source\repos\CariHesap\CariHesap\obj\Debug\CariHesap.csproj.GenerateResource.cache
+C:\Users\gokce\source\repos\CariHesap\CariHesap\obj\Debug\CariHesap.csproj.CoreCompileInputs.cache
+C:\Users\gokce\source\repos\CariHesap\CariHesap\obj\Debug\CariHesap.exe
+C:\Users\gokce\source\repos\CariHesap\CariHesap\obj\Debug\CariHesap.pdb
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\bin\Debug\CariHesap.exe.config
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\bin\Debug\CariHesap.exe
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\bin\Debug\CariHesap.pdb
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\bin\Debug\EntityFramework.dll
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\bin\Debug\EntityFramework.xml
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\obj\Debug\CariHesap.csprojAssemblyReference.cache
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\obj\Debug\CariHesap.Islem.resources
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\obj\Debug\CariHesap.Login.resources
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\obj\Debug\CariHesap.Properties.Resources.resources
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\obj\Debug\CariHesap.csproj.GenerateResource.cache
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\obj\Debug\CariHesap.csproj.CoreCompileInputs.cache
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\obj\Debug\CariHesap.csproj.CopyComplete
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\obj\Debug\CariHesap.exe
+C:\Users\rengin atilla\Desktop\CariHesaplama\CariHesaplama\CariHesap\CariHesap\obj\Debug\CariHesap.pdb

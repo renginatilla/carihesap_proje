@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ce454de0568c4bd382a0fb81eb8f2241" Name="Diagram1" ZoomLevel="49">
+        <EntityTypeShape EntityType="CariHesapModel.Kategori" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="CariHesapModel.Kullanici" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="CariHesapModel.Musteriler" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="CariHesapModel.Satis" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="CariHesapModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CariHesapModel.Urun" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="CariHesapModel.FK_Urun_Kategori" />
+        <AssociationConnector Association="CariHesapModel.FK_Musteriler_Kullanici" />
+        <AssociationConnector Association="CariHesapModel.FK_Satis_Musteriler" />
+        <AssociationConnector Association="CariHesapModel.FK_Satis_Urun" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

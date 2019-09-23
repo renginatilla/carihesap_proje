@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CariHesapModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CariHesapEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Kategori" EntityType="CariHesapModel.Kategori" />
+    <EntitySet Name="Kullanici" EntityType="CariHesapModel.Kullanici" />
+    <EntitySet Name="Musteriler" EntityType="CariHesapModel.Musteriler" />
+    <EntitySet Name="Satis" EntityType="CariHesapModel.Satis" />
+    <EntitySet Name="sysdiagrams" EntityType="CariHesapModel.sysdiagrams" />
+    <EntitySet Name="Urun" EntityType="CariHesapModel.Urun" />
+    <AssociationSet Name="FK_Urun_Kategori" Association="CariHesapModel.FK_Urun_Kategori">
+      <End Role="Kategori" EntitySet="Kategori" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Musteriler_Kullanici" Association="CariHesapModel.FK_Musteriler_Kullanici">
+      <End Role="Kullanici" EntitySet="Kullanici" />
+      <End Role="Musteriler" EntitySet="Musteriler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Satis_Musteriler" Association="CariHesapModel.FK_Satis_Musteriler">
+      <End Role="Musteriler" EntitySet="Musteriler" />
+      <End Role="Satis" EntitySet="Satis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Satis_Urun" Association="CariHesapModel.FK_Satis_Urun">
+      <End Role="Urun" EntitySet="Urun" />
+      <End Role="Satis" EntitySet="Satis" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Kategori">
+    <Key>
+      <PropertyRef Name="KategoriId" />
+    </Key>
+    <Property Name="KategoriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KategoriName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KategoriAciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urun" Relationship="CariHesapModel.FK_Urun_Kategori" FromRole="Kategori" ToRole="Urun" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="KullaniciId" />
+    </Key>
+    <Property Name="KullaniciId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+    <NavigationProperty Name="Musteriler" Relationship="CariHesapModel.FK_Musteriler_Kullanici" FromRole="Kullanici" ToRole="Musteriler" />
+  </EntityType>
+  <EntityType Name="Musteriler">
+    <Key>
+      <PropertyRef Name="MusteriId" />
+    </Key>
+    <Property Name="MusteriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MusteriSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MusteriTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MusteriAdres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciId" Type="Int32" />
+    <NavigationProperty Name="Kullanici" Relationship="CariHesapModel.FK_Musteriler_Kullanici" FromRole="Musteriler" ToRole="Kullanici" />
+    <NavigationProperty Name="Satis" Relationship="CariHesapModel.FK_Satis_Musteriler" FromRole="Musteriler" ToRole="Satis" />
+  </EntityType>
+  <EntityType Name="Satis">
+    <Key>
+      <PropertyRef Name="SatisId" />
+    </Key>
+    <Property Name="SatisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriId" Type="Int32" />
+    <Property Name="UrunId" Type="Int32" />
+    <Property Name="KayitTarih" Type="DateTime" Precision="3" />
+    <Property Name="OdenenTutar" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Musteriler" Relationship="CariHesapModel.FK_Satis_Musteriler" FromRole="Satis" ToRole="Musteriler" />
+    <NavigationProperty Name="Urun" Relationship="CariHesapModel.FK_Satis_Urun" FromRole="Satis" ToRole="Urun" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Urun">
+    <Key>
+      <PropertyRef Name="UrunId" />
+    </Key>
+    <Property Name="UrunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KategoriId" Type="Int32" />
+    <Property Name="AlisFiyati" Type="Int32" Nullable="false" />
+    <Property Name="SatisFiyati" Type="Int32" Nullable="false" />
+    <Property Name="UrunStok" Type="Int32" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kategori" Relationship="CariHesapModel.FK_Urun_Kategori" FromRole="Urun" ToRole="Kategori" />
+    <NavigationProperty Name="Satis" Relationship="CariHesapModel.FK_Satis_Urun" FromRole="Urun" ToRole="Satis" />
+  </EntityType>
+  <Association Name="FK_Urun_Kategori">
+    <End Type="CariHesapModel.Kategori" Role="Kategori" Multiplicity="0..1" />
+    <End Type="CariHesapModel.Urun" Role="Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategori">
+        <PropertyRef Name="KategoriId" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="KategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Musteriler_Kullanici">
+    <End Type="CariHesapModel.Kullanici" Role="Kullanici" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="CariHesapModel.Musteriler" Role="Musteriler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanici">
+        <PropertyRef Name="KullaniciId" />
+      </Principal>
+      <Dependent Role="Musteriler">
+        <PropertyRef Name="KullaniciId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Satis_Musteriler">
+    <End Type="CariHesapModel.Musteriler" Role="Musteriler" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="CariHesapModel.Satis" Role="Satis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteriler">
+        <PropertyRef Name="MusteriId" />
+      </Principal>
+      <Dependent Role="Satis">
+        <PropertyRef Name="MusteriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Satis_Urun">
+    <End Type="CariHesapModel.Urun" Role="Urun" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="CariHesapModel.Satis" Role="Satis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="UrunId" />
+      </Principal>
+      <Dependent Role="Satis">
+        <PropertyRef Name="UrunId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

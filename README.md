@@ -1,4 +1,4 @@
-# BalTopla_Proje
+# CariHesap_Proje
 C#, Object Oriented Programming(OOP), Entity Framework, SQL
 The Current Account Program, which includes the above structures, aims to keep and report product information, customer information and sales information in the system.
 The program has two input types: administrator and user. There are differences of authority and access in the interface. Images are attached.

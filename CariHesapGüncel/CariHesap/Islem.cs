@@ -45,7 +45,6 @@ namespace CariHesap
             comboBox3.DataSource = HelperMusteri.GetMusteriList();
 
             table = new DataTable();
-
             table.Columns.Add("MüşteriAdı", typeof(string));
             table.Columns.Add("ÜrünKategori", typeof(string));
             table.Columns.Add("ÜrünAdı", typeof(string));
